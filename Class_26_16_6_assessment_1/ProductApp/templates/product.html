@@ -1,0 +1,38 @@
+{% extends 'inc/base.html' %}
+
+{% include 'inc/nav.html' %}
+{% block main_body %}
+<h2>Product List</h2>
+<p>
+    <button class="button button1">
+        <a href="{% url 'add_prd' %}" >+ Add New Product</a>
+    </button>
+</p>
+<table>
+    <tr>
+      <th>SN</th>
+      <th>Product Name</th>      
+      <th>Category</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Action</th>
+    </tr>
+
+    {% for d in data %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ d.product_name }}</td>
+        <td>{{ d.category }}</td>
+        <td>{{ d.description }}</td>
+        <td>{{ d.price }}</td>        
+        <td>{{ d.quantity }}</td>
+        <td>
+            <a href="{% url 'delete_prd' d.id %}">Delete</a> ||
+            <a href="{% url 'edit_prd' d.id %}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock main_body %}
+    

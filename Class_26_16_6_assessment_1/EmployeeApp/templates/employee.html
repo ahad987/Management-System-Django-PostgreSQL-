@@ -1,0 +1,38 @@
+{% extends 'inc/base.html' %}
+
+{% include 'inc/nav.html' %}
+{% block main_body %}
+<h2>Employee List</h2>
+<p>
+    <button class="button button1">
+        <a href="{% url 'add_emp' %}" >+ Add New Employee</a>
+    </button>
+</p>
+<table>
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Department</th>
+      <th>Salary</th>
+      <th>Acction</th>
+    </tr>
+
+    {% for d in data %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ d.name }}</td>
+        <td>{{ d.email }}</td>
+        <td>{{ d.phone }}</td>
+        <td>{{ d.department }}</td>        
+        <td>{{ d.salary }}</td>
+        <td>
+            <a href="{% url 'delete_emp' d.id %}">Delete</a> ||
+            <a href="{% url 'edit_emp' d.id %}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock main_body %}
+    

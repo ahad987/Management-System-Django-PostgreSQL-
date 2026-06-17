@@ -1,0 +1,19 @@
+<header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Management<span>System</span></a>
+      <b>Developed by <i>AA Chowdhury</i></b>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}" class="active">Home</a></li>
+          <li><a href="{% url 'emp' %}">Employee</a></li>
+          <li><a href="{% url 'std' %}">Student</a></li>
+          <li><a href="{% url 'prd' %}">Product</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="{% url 'signout' %}" class="btn-secondary">Sign out</a>
+        {% comment %} <a href="signup.html" class="btn-primary">Get Started</a> {% endcomment %}
+      </div>
+    </div>
+  </header>

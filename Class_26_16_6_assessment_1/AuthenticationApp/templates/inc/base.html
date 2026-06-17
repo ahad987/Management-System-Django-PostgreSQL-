@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Home Page</title>
+  {% include 'inc/css.html' %}
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  {% include 'inc/nav.html' %}
+
+  <section class="hero">
+    <div class="hero-container">
+      {% block main_body %}
+        
+      {% endblock main_body %}
+    </div>
+  </section>
+    
+
+  <!-- Hero Section -->
+  
+
+  <!-- Features Grid Section -->
+  
+
+  <!-- Footer Elements -->
+  {% include 'inc/footer.html' %}
+
+</body>
+</html>

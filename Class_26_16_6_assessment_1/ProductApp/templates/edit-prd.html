@@ -1,0 +1,26 @@
+{% extends 'inc/base.html' %}
+
+{% include 'inc/nav.html' %}
+{% block main_body %}
+<h2>Edit Product</h2>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="text" id="product_name," name="product_name" value="{{data.product_name}}" />
+
+    <label>Category</label>
+    <input type="category" id="last_name," name="category" value="{{data.category}}" />
+
+    <label>description</label>
+    <input type="text" id="last_name," name="description" value="{{data.description}}" />
+
+    <label>price</label>
+    <input type="text" id="first_name," name="price" value="{{data.price}}" />
+
+    <label>Quantity</label>
+    <input type="text" id="last_name," name="quantity" value="{{data.quantity}}" />
+
+    <input type="submit" value="Submit" />
+  </form>
+{% endblock main_body %}
+    

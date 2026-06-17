@@ -1,0 +1,27 @@
+{% extends 'inc/base.html' %}
+
+{% include 'inc/nav.html' %}
+{% block main_body %}
+<h2>Add New Student</h2>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label>Product Name</label>
+    <input type="text" id="product_name," name="product_name" placeholder="product_name..." />
+
+    <label>Category</label>
+    <input type="category" id="last_name," name="category" placeholder="category..." />
+
+    <label>Description</label>
+    <input type="text" id="description," name="description" placeholder="description..." />
+
+    <label>Price</label>
+    <input type="text" id="first_name," name="price" placeholder="price..." />
+
+    <label>Quantity</label>
+    <input type="text" id="last_name," name="quantity" placeholder="quantity..." />
+
+    <input type="submit" value="Submit" />
+  </form>
+{% endblock main_body %}
+    
